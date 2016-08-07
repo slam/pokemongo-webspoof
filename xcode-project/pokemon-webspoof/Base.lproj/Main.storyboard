@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrA-mO-iei">
-                                <rect key="frame" x="182.5" y="279" width="236" height="42"/>
+                                <rect key="frame" x="182" y="279" width="236" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Launch Pokemon GO"/>
                                 <connections>
@@ -28,7 +29,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're good to go !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPl-wM-4rE">
                                 <rect key="frame" x="228" y="250" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W13-EF-BVX">
@@ -40,22 +41,47 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep app running in the background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-Q8-mMV">
                                 <rect key="frame" x="162" y="569" width="277" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-21-8TH">
+                                <rect key="frame" x="30" y="30" width="540" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W13-EF-BVX" firstAttribute="bottom" secondItem="Nhr-Q8-mMV" secondAttribute="top" id="2AT-NP-H6x"/>
                             <constraint firstItem="W13-EF-BVX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bd-C0-Pc3"/>
+                            <constraint firstItem="PPp-21-8TH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="2fm-Hl-ndu"/>
                             <constraint firstItem="Nhr-Q8-mMV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88e-6c-gry"/>
+                            <constraint firstItem="TPl-wM-4rE" firstAttribute="top" secondItem="PPp-21-8TH" secondAttribute="bottom" constant="10" id="8Am-vN-Jjc"/>
+                            <constraint firstItem="TPl-wM-4rE" firstAttribute="top" secondItem="PPp-21-8TH" secondAttribute="bottom" constant="20" id="9Pe-x2-sbv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PPp-21-8TH" secondAttribute="trailing" constant="10" id="AxW-5M-FrP"/>
+                            <constraint firstItem="PPp-21-8TH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Egr-1M-PeW"/>
                             <constraint firstItem="ZrA-mO-iei" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WNz-pv-qIr"/>
+                            <constraint firstItem="PPp-21-8TH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ZJu-JW-zxt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PPp-21-8TH" secondAttribute="trailing" constant="20" id="bc8-zZ-Ua3"/>
+                            <constraint firstItem="PPp-21-8TH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="fMT-IC-dZp"/>
                             <constraint firstItem="TPl-wM-4rE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgG-N1-X2i"/>
                             <constraint firstItem="ZrA-mO-iei" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goR-G9-fdg"/>
                             <constraint firstItem="ZrA-mO-iei" firstAttribute="top" secondItem="TPl-wM-4rE" secondAttribute="bottom" constant="8" id="ij5-hR-vbc"/>
                             <constraint firstAttribute="bottom" secondItem="Nhr-Q8-mMV" secondAttribute="bottom" constant="10" id="wah-t2-Z6Q"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZJu-JW-zxt"/>
+                                <exclude reference="bc8-zZ-Ua3"/>
+                                <exclude reference="fMT-IC-dZp"/>
+                                <exclude reference="9Pe-x2-sbv"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="gpsText" destination="PPp-21-8TH" id="0Q7-5h-SgC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
