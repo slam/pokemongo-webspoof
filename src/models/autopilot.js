@@ -50,12 +50,13 @@ class Autopilot {
     const { google: { maps } } = window
     this.destination = { lat, lng }
 
+    const travelMode = this.speed > 0.005 ? maps.TravelMode.DRIVING : maps.TravelMode.WALKING
     // prepare `directionsRequest` to google map
     const directionsService = new maps.DirectionsService()
     const directionsRequest = {
       origin: { lat: userLocation[0], lng: userLocation[1] },
       destination: this.destination,
-      travelMode: maps.TravelMode.WALKING,
+      travelMode: travelMode,
       unitSystem: maps.UnitSystem.METRIC
     }
 

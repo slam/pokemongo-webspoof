@@ -85,7 +85,10 @@ class Autopilot extends Component {
   @action handleSelectTravelMode = (name, speed) => () => {
     autopilot.speed = speed / 3600
     this.travelMode = name
-  }
+
+    const { destination: { lat, lng } } = autopilot
+    autopilot.scheduleTrip(lat, lng)
+}
 
   @action handleChangeSpeed = () => {
     const { destination: { lat, lng } } = autopilot
